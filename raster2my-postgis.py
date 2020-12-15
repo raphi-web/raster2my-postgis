@@ -58,12 +58,11 @@ def db_upload(profile, db_schema, db_target_table, epsg, path, single=False):
         path = os.getcwd() + "/"
         path += "*.tif"
 
-    elif path[-1] != "/":
+    elif path[-1] != "/" and not single:
         path += "/"
 
     if not single and path != "cwd":
         path += "*.tif"
-
 
     # Set pg password environment variable - others can be included in the statement
     os.environ['PGPASSWORD'] = db_password
@@ -119,7 +118,7 @@ if args.new:
     pw = input("Password: ")
 
     create_profile(profname, dbname, host, dbuser, pw)
-    print("Created profile succesfully!\n")
+    print("Created profile successfully!\n")
     sys.exit()
 
 if args.remove:
@@ -130,7 +129,7 @@ if args.remove:
 
     delete_profile(args.profile)
 
-    print("Deleted Profile succesfully")
+    print("Deleted Profile successfully")
     sys.exit()
 
 if args.list:
@@ -144,21 +143,21 @@ if args.bulk:
         cwd = os.getcwd() + "/"
         content = os.listdir(cwd)
         content = [(file[:-4], cwd + file) for file in content if file[-4:] == ".tif"]
-        for file,file_path in content:
-            db_upload(get_profile(args.profile), args.schema, file, args.epsg, file_path, single=True)
-        sys.exit()
 
     else:
-        content = os.listdir(args.dir)
+
         path = args.dir
         if path[-1] != "/":
             path += "/"
 
+        content = os.listdir(path)
+
         content = [(file[:-4], path + file) for file in content if file[-4:] == ".tif"]
 
-        for file,file_path in content:
-            db_upload(get_profile(args.profile), args.schema, file, args.epsg, file_path, single=True)
-        sys.exit()
+    for file,file_path in content:
+        db_upload(get_profile(args.profile), args.schema, file, args.epsg, file_path, single=True)
+    sys.exit()
+
 
 if args.single:
     db_upload(get_profile(args.profile), args.schema, args.table, args.epsg, args.dir, single=True)
