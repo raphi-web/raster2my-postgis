@@ -20,7 +20,7 @@ Usage:
 ## Optional arguments:
   **-h, --help:**   show this help message and exit  
   **-single, -s:**  specify single file upload  
-  **-bulk, -b:**    upload every raster to seperate tabel  
+  **-bulk, -b:**    upload every raster to seperate tabel, name of the table is the filename of the tif  
   **-new, -n:**     create a new profile  
   **-remove, -r:**  remove profile  
   **-list, -l:**    list profiles  
