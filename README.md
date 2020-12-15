@@ -15,8 +15,8 @@ Usage:
   **table:**        the table that will be created in the db  
 
 ## Optional arguments:  
-  -h, --help   show this help message and exit  
-  -file, -f    specify single file upload  
-  -new, -n     create a new profile  
-  -remove, -r  remove profile  
-  -list, -l    list profiles  
+  **-h, --help:**   show this help message and exit  
+  **-file, -f:**    specify single file upload  
+  **-new, -n:**     create a new profile  
+  **-remove, -r:**  remove profile  
+  **-list, -l:**    list profiles  
