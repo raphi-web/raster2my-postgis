@@ -6,9 +6,9 @@ Usage:
 1. Upload multiple raster to single table: `raster2my-postgis profile dir epsg schema table` (type 'cwd' instead of directory to use current working directory)
 2. Upload a single raster: `raster2my-postgis profile dir epsg schema table -s` 
 3. Bulk upload multiple raster to separate tables: `raster2my-postgis profile dir epsg schema -b`
-4. Create Database profile: `raster2my-postgis -n`
-5. Remove Database profile: `raster2my-postgis -r profilename`
-6. List Profiles: `raster2my-postgis -l`
+4. Create database profile: `raster2my-postgis -n`
+5. Remove database profile: `raster2my-postgis -r profilename`
+6. List profiles: `raster2my-postgis -l`
 
 ## Positional arguments:  
   **profile:**      an already stored profile with database information  
