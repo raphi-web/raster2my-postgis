@@ -1,7 +1,8 @@
 # raster2my-postgis
 
 
-A simple tool to upload geospatial raster data to your postgis-database.  
+A simple tool to upload geospatial raster data to your postgis-database. Requires raster2pgsql!
+It allows you to store database information and automates pyramid layers as well as bulk uploads.
 Usage:  
 1. Upload multiple raster to single table: `raster2my-postgis profile dir epsg schema table` (type 'cwd' instead of directory to use current working directory)
 2. Upload a single raster: `raster2my-postgis profile dir epsg schema table -s` 
