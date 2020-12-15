@@ -7,12 +7,12 @@ Usage:
 3. Remove Database profile: 'raster2my-postgis -r profile name'
 4. List Profiles: 'raster2my-postgis -l'
 
-positional arguments:
-  profile      an already stored profile with database information  
-  dir          the directory of tifs or the single file to upload, type 'cwd'  as the directory name to uploade all files in the current directory.  
-  epsg         the epsg-code of the files  
-  schema       the schema in which the files will be stored  
-  table        the table that will be created in the db  
+positional arguments:  
+  **profile:**      an already stored profile with database information  
+  **dir:**          the directory of tifs or the single file to upload, type 'cwd'  as the directory name to uploade all files in the current directory.  
+  **epsg:**         the epsg-code of the files  
+  **schema:**       the schema in which the files will be stored  
+  **table:**        the table that will be created in the db  
 
 optional arguments:  
   -h, --help   show this help message and exit  
