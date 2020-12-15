@@ -54,15 +54,16 @@ def db_upload(profile, db_schema, db_target_table, epsg, path, single=False):
     db_host = profile["host"]
     db_password = profile["pw"]
 
-    if path == "cwd":
-        path = os.getcwd() + "/"
-        path += "*.tif"
+    if not single:
+        if path == "cwd":
+            path = os.getcwd() + "/"
+            path += "*.tif"
 
-    elif path[-1] != "/" and not single:
-        path += "/"
+        else:
+            if path[-1] != "/":
+                path += "/"
 
-    if not single and path != "cwd":
-        path += "*.tif"
+            path += "*.tif"
 
     # Set pg password environment variable - others can be included in the statement
     os.environ['PGPASSWORD'] = db_password
