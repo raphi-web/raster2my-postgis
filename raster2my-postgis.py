@@ -6,7 +6,7 @@ import argparse
 from argparse import RawTextHelpFormatter
 
 py_path = __file__.replace("raster2my-postgis.py", "")
-hosts_path = py_path + 'hosts.txt'
+hosts_path = py_path + 'hosts.json'
 
 
 def create_profile(profile_name, dbname, host, user, pw):
