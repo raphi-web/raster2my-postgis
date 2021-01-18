@@ -97,11 +97,11 @@ parser.add_argument("epsg", type=int, nargs="?", help="the epsg-code of the file
 parser.add_argument("schema", type=str, nargs="?", help="the schema in which the files will be stored")
 parser.add_argument("table", type=str, nargs="?", help="the table that will be created in the db")
 
-parser.add_argument("-single", "-s", action="store_true", help="specify single file upload")
-parser.add_argument("-bulk", "-b", action="store_true", help="upload every raster to seperate tabel")
-parser.add_argument("-new", "-n", action="store_true", help="create a new profile")
-parser.add_argument("-remove", "-r", action="store_true", help="remove profile")
-parser.add_argument("-list", "-l", action="store_true", help="list profiles")
+parser.add_argument("--single", "-s", action="store_true", help="specify single file upload")
+parser.add_argument("--bulk", "-b", action="store_true", help="upload every raster to seperate tabel")
+parser.add_argument("--new", "-n", action="store_true", help="create a new profile")
+parser.add_argument("--remove", "-r", action="store_true", help="remove profile")
+parser.add_argument("--list", "-l", action="store_true", help="list profiles")
 
 args = parser.parse_args()
 
